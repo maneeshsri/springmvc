@@ -20,19 +20,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		context.setConfigLocation("com.maneeshsri.sample.config");
 		
 		
-		/**
-		 * Spring Security Filter ( Optional)
-		 */
-		//FilterRegistration.Dynamic securityFilter = servletContext.addFilter("securityFilter", new DelegatingFilterProxy("springSecurityFilterChain"));
-		//securityFilter.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
-		
-		/**
-		 * CharacterEncodingFilter 
-		 */
-		//FilterRegistration.Dynamic characterEncodingFilter = servletContext.addFilter("characterEncodingFilter", new CharacterEncodingFilter());
-		//characterEncodingFilter.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
-		//characterEncodingFilter.setInitParameter("encoding", "UTF-8");
-		//characterEncodingFilter.setInitParameter("forceEncoding", "true");
+	
 		
 		servletContext.addListener(new ContextLoaderListener(context));
 		servletContext.setInitParameter("defaultHtmlEscape", "true");
